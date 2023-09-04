@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; 
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: backgroundAnimation 60s linear infinite;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar {
+    background-color: transparent;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 20px auto;
+    background: linear-gradient(#f4fdff,#1c448e,#938ba1);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-item {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: linear-gradient(#e0b0ff,#76b2d2,#483d3f);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(white,white);
+
+}
+
+.link-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+
+@keyframes backgroundAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+    33.3% {
+        transform: translate(20%, 0);
+    }
+    66.6%{
+        transform: translate(-20%,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-list li {
+        margin-right: 10px;
+    }
+}
+
+/* Tablet View */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-list li {
+        margin-right: 15px;
+    }
+}
+
+/* TV View (Larger Screens) */
+@media screen and (min-width: 1200px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-list li {
+        margin-right: 25px;
+    }
+}
+
